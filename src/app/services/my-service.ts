@@ -3,12 +3,17 @@ import { MyEnum } from '../enums/my-enum'
 
 @Injectable()
 export class MyService {
-    EnumValue: MyEnum;
+    private EnumValue: MyEnum;
+    private SetEnumValue = (myEnum: MyEnum): void => {
+        this.EnumValue = myEnum;
+    };
+    
     ReturnEnumValue: () => MyEnum;
 
     constructor() {
-        this.EnumValue = MyEnum.Three;
-        this.ReturnEnumValue = () =>{
+        this.SetEnumValue(MyEnum.Zero);
+
+        this.ReturnEnumValue = () => {
             return this.EnumValue;
         }
     }
