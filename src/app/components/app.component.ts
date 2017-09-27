@@ -10,8 +10,11 @@ import { MyService } from '../services/my-service';
 export class AppComponent {
   title = 'app';
   myNumber: number;
+  myText: string;
 
   constructor(private myService: MyService){
     this.myNumber = this.myService.ReturnEnumValue();
+
+    this.myText = this.myService.MyText;
   }
 }

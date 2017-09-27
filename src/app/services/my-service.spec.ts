@@ -9,6 +9,10 @@ describe('Given a MyService instance', () => {
         myService = new MyService();
     });
     
+    it('When the Service is instantiated, Then the MyText property is blank string', async(() => {
+        expect(myService.MyText).toEqual("");
+    }));
+
     it('When the ReturnEnumValue function is called then the enum value "Zero" is returned', async(() => {
         expect(myService.ReturnEnumValue()).toEqual(MyEnum.Zero);
     }));

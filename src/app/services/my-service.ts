@@ -9,6 +9,7 @@ export class MyService {
     };
     
     ReturnEnumValue: () => MyEnum;
+    MyText: string;
 
     constructor() {
         this.SetEnumValue(MyEnum.Zero);
@@ -16,5 +17,7 @@ export class MyService {
         this.ReturnEnumValue = () => {
             return this.EnumValue;
         }
+
+        this.MyText = "";
     }
 }
