@@ -15,7 +15,7 @@ describe('Given an AppComponent instance', () => {
   }));
 
   it('When the instance is created, Then ReturnEnumValue on MyService is called', async(() => {
-    expect(myServiceMock.ReturnEnumValue).toHaveBeenCalledTimes(1);
+    expect(myServiceMock).toHaveBeenCalledTimes(1);
   }));
 
   it('When the instance is created, Then the Enum property should be set', async(() => {
